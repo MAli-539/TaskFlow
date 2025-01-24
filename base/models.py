@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Task(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
     completed = models.BooleanField(default=False)
-    status = models.CharField(max_length=50, choices=[('To Do', 'To Do'), ('In Progress', 'In Progress'), ('Done', 'Done')], default='To Do')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
