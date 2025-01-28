@@ -31,11 +31,11 @@ class RegisterPage(FormView):
     success_url = reverse_lazy('tasks')
 
 
-def form_valid(self, form):
-    user = form.save()
-    if user is not None:
-        login(self.request, user)
-    return super(RegisterPage, self).form_valid(form)
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(RegisterPage, self).form_valid(form)
 
 
 class TaskList(LoginRequiredMixin, ListView):

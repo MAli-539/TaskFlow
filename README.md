@@ -8,7 +8,6 @@
 - [Features](#features)
 - [Testing and Validation](#testing-and-validation)
 - [Deployment](#deployment)
-- [Bugs](#bugs)
 - [Credits](#credits)
 - [AI Contributions](#ai-contributions)
 - [Future Improvements](#future-improvements)
@@ -80,9 +79,23 @@ The colour scheme for TaskFlow is designed to be clean and minimalistic, focusin
 
 ## Testing and Validation
 
-### Testing Results
-
 ### Validation
+
+## HTML Validation
+
+All HTML pages were validated using the W3C Markup Validation Service
+
+![html-test](assets/images/html-test.png)
+
+![html-test2](assets/images/html-test2.png)
+
+![html-test](assets/images/html-test3.png)
+
+## CSS Validation
+
+The style.css file was validated using the W3C CSS Validation Service
+
+![css-test](assets/images/css-test.png)
 
 ## Python Validation
 
@@ -110,15 +123,21 @@ All files generating the "E501 line too long" error are automatically generated 
 
 ## Deployment
 
-## Bugs
+The repo was created in Github. Code was created and update updated in Gitpod.
+
+The app was deployed on [Heroku here](https://taskflow1-2c59288b5c12.herokuapp.com/login/?next=/)
 
 ## Credits
 
 ### Media
 
-### Testing
+I used this youtube tutorial to help me with my [User Registration and Login Authentication](https://www.youtube.com/watch?v=tUqUdu0Sjyc)
 
 ## AI Contributions
+
+- Code Assistance: AI tools like GitHub Copilot were used to assist in writing boilerplate code and suggesting best practices.
+- Documentation: AI was used to generate initial drafts of documentation, which were then refined manually.
+- Bug Detection: AI tools helped identify potential bugs and vulnerabilities in the codebase.
 
 ## Future Improvements
 

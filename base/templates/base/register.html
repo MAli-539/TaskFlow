@@ -127,24 +127,8 @@
         <h2>Register</h2>
       </div>
       <form method="post">
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div class="form-group">
-          <label for="password-confirm">Password confirmation:</label>
-          <input
-            type="password"
-            id="password-confirm"
-            name="password-confirm"
-            required
-          />
-        </div>
+        {% csrf_token %} {{ form }}
+
         <button type="submit" class="btn-login">Register</button>
       </form>
       <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
