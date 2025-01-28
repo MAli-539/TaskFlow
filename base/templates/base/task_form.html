@@ -1,6 +1,161 @@
-<h3>Task Form</h3>
-<a href="{% url 'tasks' %}">Back</a>
-<form method="POST" action="">
-  {{ form.as_p }} {% csrf_token %}
-  <input type="submit" value="submit" />
-</form>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Task Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>TaskFlow</h1>
+        <nav>
+          {% if request.user.is_authenticated %}
+          <p>Welcome, {{ request.user }}!</p>
+          <a href="{% url 'logout' %}">Logout</a>
+          {% else %}
+          <a href="{% url 'login' %}">Login</a>
+          {% endif %}
+        </nav>
+      </header>
+
+      <hr />
+
+      <main>
+        <h3>Task Form</h3>
+        <a href="{% url 'tasks' %}" class="btn-back">Back</a>
+
+        <form method="POST" action="" class="task-form">
+          {% csrf_token %} {{ form.as_p }}
+          <input type="submit" value="Submit" class="btn-submit" />
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    margin: 0;
+    color: #007bff;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header nav p {
+    margin: 0 10px 0 0;
+    color: #555;
+  }
+
+  header nav a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+  }
+
+  /* Task Form Styles */
+  .task-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .task-form p {
+    margin-bottom: 15px;
+  }
+
+  .task-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .task-form input[type="text"],
+  .task-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .task-form input[type="text"]:focus,
+  .task-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .btn-back:hover {
+    background-color: #5a6268;
+  }
+
+  .btn-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+</style>
