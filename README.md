@@ -141,9 +141,22 @@ I used this youtube tutorial to help me with my [User Registration and Login Aut
 
 ## AI Contributions
 
-- Code Assistance: AI tools like GitHub Copilot were used to assist in writing boilerplate code and suggesting best practices.
-- Documentation: AI was used to generate initial drafts of documentation, which were then refined manually.
-- Bug Detection: AI tools helped identify potential bugs and vulnerabilities in the codebase.
+- Code Assistance: AI tools such as GitHub Copilot and ChatGPT were used to generate boilerplate code for views, models, and forms. This helped speed up development and ensured code followed common best practices.
+
+
+- Bug Detection and Debugging: AI was instrumental in identifying and resolving bugs, especially in Django forms, URL routing, and template rendering. For example, Copilot and ChatGPT highlighted incorrect form field references and helped diagnose template logic issues, reducing debugging time significantly. This enabled a more efficient development process and improved code reliability.
+
+
+- Performance & UX Improvements: AI suggestions contributed to performance and usability enhancements. For instance, ChatGPT recommended using conditional logic to minimize template rendering issues and improve user feedback (e.g., displaying success messages or form errors clearly). These improvements enhanced the overall user experience, particularly in form handling and task visibility.
+
+
+- Workflow Insights & Reflection: Integrating AI into the development process changed the way problems were approached. Instead of searching through lengthy documentation, I could quickly get concise answers or examples from ChatGPT, which sped up problem-solving. It also encouraged iterative development — by rapidly testing AI-suggested code and refining it — which improved my understanding of Django.
+
+
+- Documentation: AI tools helped draft initial README sections and commit messages, allowing me to focus more on development while ensuring the documentation remained clear and informative.
+
+
+- Overall Impact: The use of AI increased development speed, improved code quality, and boosted my confidence when tackling unfamiliar aspects of Django. It acted as both a mentor and pair programmer throughout the project.
 
 ## Future Improvements
 
