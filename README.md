@@ -127,6 +127,12 @@ The repo was created in Github. Code was created and update updated in Gitpod.
 
 The app was deployed on [Heroku here](https://taskflow1-2c59288b5c12.herokuapp.com/login/?next=/)
 
+1. Sign up for an account on Heroku.
+2. Clone the project repository and connect it to a new remote, if needed.
+3. Configure the necessary environment variables (e.g., SECRET_KEY, DEBUG, ALLOWED_HOSTS, DATABASE_URL, etc.).
+4. Apply database migrations and gather static assets.
+5. Review the build and deployment logs to ensure everything completed successfully.
+
 ## Credits
 
 ### Media
